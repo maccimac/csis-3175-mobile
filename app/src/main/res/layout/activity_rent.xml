@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RentActivity">
+
+    <TextView
+        android:id="@+id/labelRentACar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:layout_marginEnd="100dp"
+        android:text="Rent A Car"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="210dp" />
+
+    <Button
+        android:id="@+id/btnCalculate"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="132dp"
+        android:text="Calculate  Cost"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:layout_editor_absoluteX="120dp" />
+
+    <EditText
+        android:id="@+id/editTxtNumDays"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="1"
+        android:inputType="number"
+        tools:hint="Number of days"
+        tools:layout_editor_absoluteX="106dp"
+        tools:layout_editor_absoluteY="273dp" />
+
+    <Spinner
+        android:id="@+id/spinnerCarTypes"
+        android:layout_width="409dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="80dp"
+        android:layout_marginEnd="80dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="353dp"
+        android:entries="@array/carTypes"
+    />
+</androidx.constraintlayout.widget.ConstraintLayout>

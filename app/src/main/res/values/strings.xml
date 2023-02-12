@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">MidtermPractice</string>
+    <string name="firstname">Jennifer</string>
+    <string name="lastname">Macaranas</string>
+    <string name="studentNumber">300352912</string>
+    <string name="labelStart">Start</string>
+    <string-array name="carTypes">
+        <item>SUV</item>
+        <item>SUV</item>
+        <item>SUV</item>
+        <item>SUV</item>
+        <item>SUV</item>
+    </string-array>
+</resources>
+
