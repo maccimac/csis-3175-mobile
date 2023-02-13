@@ -39,7 +39,9 @@ public class RentActivity extends AppCompatActivity {
     public void calculateCost(){
 
         String selection = spinnerCarType.getSelectedItem().toString();
-        String numDays = String.valueOf(editInputNum.getText());
+        String numDaysString = String.valueOf(editInputNum.getText());
+        Integer numDays = Integer.parseInt(numDaysString);
+
         System.out.println(numDays);
 
         double charge  = 0;
@@ -57,8 +59,15 @@ public class RentActivity extends AppCompatActivity {
                 charge = 65.99;
                 break;
         }
-        double finalCost = charge * Integer.parseInt(numDays);
-        txtFinalCost.setText("Final cost is " + finalCost);
+        double finalCost = charge * numDays;
+        boolean hasDiscount = numDays > 6;
+        if(hasDiscount){
+            finalCost = finalCost * 0.85;
+        }
+        String finalCostFormatted = String.format("%, .2f", finalCost);
+        String finalResult = "Final cost is $" + finalCostFormatted;
+        if (hasDiscount) finalResult += " with discount";
+        txtFinalCost.setText(finalResult);
     }
 
 }
