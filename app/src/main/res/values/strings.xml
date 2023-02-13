@@ -6,10 +6,9 @@
     <string name="labelStart">Start</string>
     <string-array name="carTypes">
         <item>SUV</item>
-        <item>SUV</item>
-        <item>SUV</item>
-        <item>SUV</item>
-        <item>SUV</item>
+        <item>Economy</item>
+        <item>Minivan</item>
+        <item>Convertible</item>
     </string-array>
 </resources>
 

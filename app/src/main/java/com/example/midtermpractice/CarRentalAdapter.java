@@ -93,10 +93,4 @@ public class CarRentalAdapter extends RecyclerView.Adapter {
         return companies.length ;
     }
 
-//    public Intent setupUrl(String url){
-//        Uri uri = Uri.parse(url); // missing 'http://' will cause crashed
-//        Intent intent = new Intent(Intent.ACTION_VIEW, uri);
-////        return intent;
-////        startActivity(intent);
-//    }
 }

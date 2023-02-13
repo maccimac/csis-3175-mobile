@@ -12,40 +12,57 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="100dp"
         android:layout_marginEnd="100dp"
+        android:layout_marginBottom="44dp"
         android:text="Rent A Car"
+        app:layout_constraintBottom_toTopOf="@+id/editTxtNumDays"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="210dp" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/btnCalculate"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="120dp"
+        android:layout_marginEnd="120dp"
         android:layout_marginBottom="132dp"
         android:text="Calculate  Cost"
         app:layout_constraintBottom_toBottomOf="parent"
-        tools:layout_editor_absoluteX="120dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
         android:id="@+id/editTxtNumDays"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="35dp"
         android:ems="10"
         android:hint="1"
         android:inputType="number"
-        tools:hint="Number of days"
-        tools:layout_editor_absoluteX="106dp"
-        tools:layout_editor_absoluteY="273dp" />
+        app:layout_constraintBottom_toTopOf="@+id/spinnerCarTypes"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:hint="Number of days" />
 
     <Spinner
         android:id="@+id/spinnerCarTypes"
-        android:layout_width="409dp"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="80dp"
         android:layout_marginEnd="80dp"
+        android:entries="@array/carTypes"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="353dp"
-        android:entries="@array/carTypes"
-    />
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtFinalCost"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="120dp"
+        android:layout_marginEnd="120dp"
+        android:layout_marginBottom="60dp"
+        app:layout_constraintBottom_toTopOf="@+id/btnCalculate"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
