@@ -27,7 +27,6 @@ public class RentActivity extends AppCompatActivity {
         txtFinalCost = findViewById(R.id.txtFinalCost);
         editInputNum = findViewById(R.id.editTxtNumDays);
 
-
         btnCalculate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -37,12 +36,9 @@ public class RentActivity extends AppCompatActivity {
     }
 
     public void calculateCost(){
-
         String selection = spinnerCarType.getSelectedItem().toString();
         String numDaysString = String.valueOf(editInputNum.getText());
         Integer numDays = Integer.parseInt(numDaysString);
-
-        System.out.println(numDays);
 
         double charge  = 0;
         switch (selection) {
@@ -69,5 +65,4 @@ public class RentActivity extends AppCompatActivity {
         if (hasDiscount) finalResult += " with discount";
         txtFinalCost.setText(finalResult);
     }
-
 }

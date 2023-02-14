@@ -24,21 +24,17 @@ public class CarRentalActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_car_rental);
 
-
         RecyclerView recyclerCompanies = findViewById(R.id.recyclerCompanies);
         int columnCount = 1;
         recyclerCompanies.setLayoutManager(new GridLayoutManager(this, columnCount));
         companies = prepareCompanies(companiesStringArr);
         CarRentalAdapter adapter = new CarRentalAdapter(this, companies );
         recyclerCompanies.setAdapter(adapter);
-
     }
 
     public HashMap<String , String>[] prepareCompanies (String[] companiesArr){
         HashMap<String, String>[] companiesHash = new HashMap[companiesArr.length];
-
         Resources r = getResources();
-
 
         for (int i = 0; i < companiesArr.length; i++) {
             String comp = companiesArr[i];
@@ -53,11 +49,9 @@ public class CarRentalActivity extends AppCompatActivity {
             singleHash.put("logoId",  Integer.toString(drawableId));
             singleHash.put("url",  "http://google.com");
             companiesHash[i] = singleHash;
-
         }
 
         System.out.println(Arrays.asList(companiesHash));
         return companiesHash;
-
     }
 }

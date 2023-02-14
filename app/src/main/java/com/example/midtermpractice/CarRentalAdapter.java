@@ -21,10 +21,8 @@ public class CarRentalAdapter extends RecyclerView.Adapter {
     HashMap<String, String>[] companies;
     Context context;
 
-
     public CarRentalAdapter(@NonNull Context context, HashMap<String,String>[] companies ) {
 //        super(context);
-
         this.companies = companies;
         this.context = context;
         layoutInflater = LayoutInflater.from(context);
@@ -32,7 +30,6 @@ public class CarRentalAdapter extends RecyclerView.Adapter {
 
 
     // START BY CREATING A VIEWHOLDER CLASS WHICH U WILL USE LATER FOR RecyclerView.ViewHolder onCreateViewHolder()
-    //
     public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
         ImageView imgCompanyLogo;
         TextView txtCompanyName;
@@ -47,13 +44,7 @@ public class CarRentalAdapter extends RecyclerView.Adapter {
 
         @Override
         public void onClick(View v) {
-//            company.get("url")); // missing 'http://' will cause crashed
-//            Intent intent = new Intent(Intent.ACTION_VIEW);
-//            intent.setData(uri);
-////                return intent;
-//            startActivity(intent)
-
-
+            //
         }
     }
 
@@ -73,7 +64,6 @@ public class CarRentalAdapter extends RecyclerView.Adapter {
         int logoId = Integer.parseInt(company.get("logoId"));
         ((ViewHolder)holder).txtCompanyName.setText(name);
         ((ViewHolder)holder).imgCompanyLogo.setImageResource(logoId);
-
         ((ViewHolder)holder).imgCompanyLogo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
