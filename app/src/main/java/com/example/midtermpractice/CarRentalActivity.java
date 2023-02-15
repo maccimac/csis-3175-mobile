@@ -43,13 +43,11 @@ public class CarRentalActivity extends AppCompatActivity {
     }
 
     public void setupListView(ArrayList<HashMap<String, String>> arrList){
-
         String[] fromHashKeys = {"name", "logoId"};
         int[] toElements = {R.id.labelCompName, R.id.imgCompanyLogoList};
 
         SimpleAdapter adapter = new SimpleAdapter(CarRentalActivity.this, arrList, R.layout.listview_car_company, fromHashKeys, toElements );
         listCompanies.setAdapter(adapter);
-
     }
 
     public HashMap<String , String>[] prepareCompanies (String[] companiesArr){
@@ -72,7 +70,6 @@ public class CarRentalActivity extends AppCompatActivity {
 
             compArrList.add(singleHash);
         }
-
         System.out.println(Arrays.asList(companiesHash));
         return companiesHash;
     }

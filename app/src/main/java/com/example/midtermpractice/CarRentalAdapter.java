@@ -27,8 +27,6 @@ public class CarRentalAdapter extends RecyclerView.Adapter {
         this.context = context;
         layoutInflater = LayoutInflater.from(context);
     }
-
-
     // START BY CREATING A VIEWHOLDER CLASS WHICH U WILL USE LATER FOR RecyclerView.ViewHolder onCreateViewHolder()
     public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
         ImageView imgCompanyLogo;
@@ -41,7 +39,6 @@ public class CarRentalAdapter extends RecyclerView.Adapter {
             txtCompanyName = itemView.findViewById(R.id.txtCompanyName);
             itemView.setOnClickListener(this);
         }
-
         @Override
         public void onClick(View v) {
             //
@@ -77,10 +74,8 @@ public class CarRentalAdapter extends RecyclerView.Adapter {
         });
 
     }
-
     @Override
     public int getItemCount() {
         return companies.length ;
     }
-
 }
