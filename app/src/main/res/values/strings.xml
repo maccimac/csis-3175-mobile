@@ -10,5 +10,6 @@
         <item>Minivan</item>
         <item>Convertible</item>
     </string-array>
+    <string name="labelRentACar">Rent A Car</string>
 </resources>
 

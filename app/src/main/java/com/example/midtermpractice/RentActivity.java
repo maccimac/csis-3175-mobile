@@ -2,6 +2,7 @@ package com.example.midtermpractice;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -16,6 +17,7 @@ public class RentActivity extends AppCompatActivity {
     TextView txtFinalCost;
     Spinner spinnerCarType;
     EditText editInputNum;
+    TextView labelRentACar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +28,13 @@ public class RentActivity extends AppCompatActivity {
         btnCalculate = findViewById(R.id.btnCalculate);
         txtFinalCost = findViewById(R.id.txtFinalCost);
         editInputNum = findViewById(R.id.editTxtNumDays);
+        labelRentACar = findViewById(R.id.labelRentACar);
+
+        Intent companyIntent = getIntent();
+        if(companyIntent!=null){
+            String newLabel = companyIntent.getStringExtra("companyName");
+            labelRentACar.setText(newLabel);
+        }
 
         btnCalculate.setOnClickListener(new View.OnClickListener() {
             @Override

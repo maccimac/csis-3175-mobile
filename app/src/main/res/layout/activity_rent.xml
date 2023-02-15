@@ -13,7 +13,7 @@
         android:layout_marginStart="100dp"
         android:layout_marginEnd="100dp"
         android:layout_marginBottom="44dp"
-        android:text="Rent A Car"
+        android:text="@string/labelRentACar"
         app:layout_constraintBottom_toTopOf="@+id/editTxtNumDays"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />

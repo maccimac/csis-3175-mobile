@@ -69,6 +69,7 @@ public class CarRentalAdapter extends RecyclerView.Adapter {
                 intentUrl.setData(uri);
                 context.startActivity(intentUrl);
                 Intent intentRent = new Intent(context, RentActivity.class);
+                intentRent.putExtra("companyName", name);
                 context.startActivity(intentRent);
             }
         });
