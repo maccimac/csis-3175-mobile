@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.RadioButton;
 import android.widget.Spinner;
 import android.widget.TextView;
 
@@ -18,6 +19,8 @@ public class RentActivity extends AppCompatActivity {
     Spinner spinnerCarType;
     EditText editInputNum;
     TextView labelRentACar;
+    RadioButton radioWithin;
+    RadioButton radioBeyond;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,6 +32,9 @@ public class RentActivity extends AppCompatActivity {
         txtFinalCost = findViewById(R.id.txtFinalCost);
         editInputNum = findViewById(R.id.editTxtNumDays);
         labelRentACar = findViewById(R.id.labelRentACar);
+        radioWithin = findViewById(R.id.radioWithin);
+        radioBeyond = findViewById(R.id.radioBeyond);
+
 
         Intent companyIntent = getIntent();
         if(companyIntent!=null){
@@ -71,7 +77,18 @@ public class RentActivity extends AppCompatActivity {
         }
         String finalCostFormatted = String.format("%, .2f", finalCost);
         String finalResult = "Final cost is $" + finalCostFormatted;
+
+        String location = " in Canada";
+        if(radioBeyond.isChecked()){
+            location = " beyond BC";
+        }
+
+        finalResult += location;
+
+
         if (hasDiscount) finalResult += " with discount";
+
+
         txtFinalCost.setText(finalResult);
     }
 }
